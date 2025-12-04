@@ -1,0 +1,97 @@
+"use client"
+
+import { useRouter, usePathname } from "next/navigation"
+import { Bot, LogOut, Rocket, Users, Play, FileText } from "lucide-react"
+import { removeToken } from "@/lib/api"
+import Link from "next/link"
+
+export function Navbar() {
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const handleLogout = () => {
+    removeToken()
+    router.push("/login")
+  }
+
+  const navItems = [
+    { href: "/dashboard/agents", label: "Mes Agents", icon: Users },
+    { href: "/dashboard/run", label: "Lancer un Topic", icon: Play },
+    { href: "/dashboard/results", label: "Résultats", icon: FileText },
+  ]
+
+  return (
+    <nav className="bg-card border-b border-border sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center gap-8">
+            <Link href="/dashboard/agents" className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                <Bot className="w-6 h-6 text-primary" />
+              </div>
+              <span className="font-bold text-lg text-foreground hidden sm:block">AI Expert Agents Studio</span>
+            </Link>
+
+            <div className="hidden md:flex items-center gap-1">
+              {navItems.map((item) => {
+                const Icon = item.icon
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                      isActive
+                        ? "bg-primary/20 text-primary"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span className="text-sm font-medium">{item.label}</span>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <button className="flex items-center gap-2 bg-gradient-to-r from-primary to-cyan-400 hover:from-primary/90 hover:to-cyan-400/90 text-primary-foreground font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-lg shadow-primary/25">
+              <Rocket className="w-4 h-4" />
+              <span className="hidden sm:inline">DEPLOY</span>
+            </button>
+
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-secondary px-3 py-2 rounded-lg transition-all duration-200"
+            >
+              <LogOut className="w-5 h-5" />
+              <span className="hidden sm:inline">Logout</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile navigation */}
+        <div className="md:hidden flex items-center gap-1 pb-3 overflow-x-auto">
+          {navItems.map((item) => {
+            const Icon = item.icon
+            const isActive = pathname === item.href
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  isActive
+                    ? "bg-primary/20 text-primary"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span className="text-sm font-medium">{item.label}</span>
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </nav>
+  )
+}
