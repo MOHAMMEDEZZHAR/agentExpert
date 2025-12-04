@@ -29,10 +29,10 @@ export default function HistoryPage() {
     fetchRuns()
   }, [])
 
-  const viewRun = (id: string) => {
+  const viewRun = (id: string, topic: string) => {
     if (typeof window !== "undefined") {
       localStorage.setItem("lastRunId", id)
-      // Optionally clear lastTopic or set it if needed
+      localStorage.setItem("lastTopic", topic)
       router.push("/dashboard/results")
     }
   }
@@ -61,7 +61,7 @@ export default function HistoryPage() {
                 </div>
 
                   <div className="flex gap-3 mt-4">
-                    <button onClick={() => viewRun(run.id)} className="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 rounded-lg text-sm font-medium text-white">
+                    <button onClick={() => viewRun(run.id, run.topic)} className="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 rounded-lg text-sm font-medium text-white">
                       Voir le résultat →
                     </button>
                     <button

@@ -43,10 +43,10 @@ function HistoryPage() {
             fetchRuns();
         }
     }["HistoryPage.useEffect"], []);
-    const viewRun = (id)=>{
+    const viewRun = (id, topic)=>{
         if ("TURBOPACK compile-time truthy", 1) {
             localStorage.setItem("lastRunId", id);
-            // Optionally clear lastTopic or set it if needed
+            localStorage.setItem("lastTopic", topic);
             router.push("/dashboard/results");
         }
     };
@@ -131,7 +131,7 @@ function HistoryPage() {
                                     className: "flex gap-3 mt-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>viewRun(run.id),
+                                            onClick: ()=>viewRun(run.id, run.topic),
                                             className: "inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 rounded-lg text-sm font-medium text-white",
                                             children: "Voir le résultat →"
                                         }, void 0, false, {

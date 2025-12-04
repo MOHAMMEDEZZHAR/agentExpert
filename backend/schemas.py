@@ -29,3 +29,12 @@ class CrewRun(Base):
     status = Column(String(20), default="running")
     result_long = Column(Text)
     created_at = Column(DateTime, server_default=func.now())
+
+
+class AgentDeployment(Base):
+    __tablename__ = "agent_deployments"
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    agent_id = Column(String(36), nullable=False)
+    api_key = Column(String(64), unique=True, nullable=False)
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, server_default=func.now())

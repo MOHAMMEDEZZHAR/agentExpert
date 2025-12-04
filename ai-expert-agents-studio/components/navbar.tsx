@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, usePathname } from "next/navigation"
-import { Bot, LogOut, Rocket, Users, Play, FileText, Clock } from "lucide-react"
+import { Bot, LogOut, Users, Play, FileText, Clock, Zap } from "lucide-react"
 import { removeToken } from "@/lib/api"
 import Link from "next/link"
 
@@ -19,6 +19,7 @@ export function Navbar() {
     { href: "/dashboard/run", label: "Lancer un Topic", icon: Play },
     { href: "/dashboard/results", label: "Résultats", icon: FileText },
     { href: "/history", label: "Historique", icon: Clock },
+    { href: "/deployments", label: "Déploiements", icon: Zap },
   ]
 
   return (
@@ -56,19 +57,6 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Floating one-click deploy button (opens Railway with prefilled env) */}
-            <button
-              onClick={() => {
-                const frontendUrl = typeof window !== "undefined" ? window.location.origin : ""
-                const deployUrl = `https://railway.app/new?ref=ai-expert-agents-studio&env[OPENAI_API_KEY]=${localStorage.getItem("openai_key") || "sk-..."}&env[BACKEND_URL]=${frontendUrl}`
-                window.open(deployUrl, "_blank")
-              }}
-              className="fixed bottom-6 right-6 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-6 rounded-full shadow-2xl flex items-center gap-3 transform hover:scale-110 transition-all z-50"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15H9v-4H5l5-6 5 6h-4v4z"/></svg>
-              <span className="hidden sm:inline">DEPLOY EN 1 CLIC</span>
-            </button>
-
             <button
               onClick={handleLogout}
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-secondary px-3 py-2 rounded-lg transition-all duration-200"

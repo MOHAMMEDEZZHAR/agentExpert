@@ -11,8 +11,11 @@ app = FastAPI(title="AI Expert Agents Studio")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    # Restrict origins in development to localhost frontend.
+    # In production, replace with your real frontend origin(s).
+    allow_origins=["http://localhost:3000"],
+    # For security, avoid allowing credentials for all origins.
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
