@@ -71,3 +71,24 @@ def get_result(run_id: str, db: Session = Depends(database.get_db), user=Depends
     if not run:
         raise HTTPException(404, "Run non trouvé")
     return run
+
+
+@router.get("/crew/runs")
+def get_all_runs(db: Session = Depends(database.get_db), user=Depends(get_current_user)):
+    runs = db.query(CrewRun).order_by(CrewRun.created_at.desc()).all()
+    return [{
+        "id": r.id,
+        "topic": r.topic,
+        "status": r.status,
+        "created_at": r.created_at.isoformat() if r.created_at else None
+    } for r in runs]
+
+
+@router.delete("/crew/runs/{run_id}")
+def delete_run(run_id: str, db: Session = Depends(database.get_db), user=Depends(get_current_user)):
+    run = db.query(CrewRun).filter(CrewRun.id == run_id).first()
+    if not run:
+        raise HTTPException(status_code=404, detail="Run non trouvé")
+    db.delete(run)
+    db.commit()
+    return {"message": "Run supprimé avec succès"}
