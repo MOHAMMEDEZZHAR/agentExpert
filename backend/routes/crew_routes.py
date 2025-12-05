@@ -1,5 +1,5 @@
 # backend/routes/crew_routes.py
-from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, Header
+from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, Header, Request
 from sqlalchemy.orm import Session
 import database
 from schemas import Agent, CrewRun, AgentDeployment
@@ -182,79 +182,99 @@ def list_deployments(db: Session = Depends(database.get_db), user=Depends(get_cu
     } for d in deployments]
 
 
-class AskRequest(BaseModel):
-    api_key: str | None = None
-    question: str
-
-
 @router.post("/agents/{agent_id}/ask")
-async def ask_agent(agent_id: str, request: AskRequest, db: Session = Depends(database.get_db), authorization: str | None = Header(None)):
+async def ask_agent(agent_id: str, request: Request, db: Session = Depends(database.get_db), authorization: str | None = Header(None)):
     """Public endpoint for external API consumption - requires api_key.
     Accepts the key in the JSON body or in the Authorization header as "Bearer <key>".
     """
-    api_key = request.api_key
-    question = request.question
-
-    # Prefer Authorization header if present
-    if not api_key and authorization:
-        if authorization.lower().startswith("bearer "):
-            api_key = authorization.split(" ", 1)[1].strip()
-
-    if not api_key or not question:
-        raise HTTPException(status_code=400, detail="api_key et question requis")
-
-    # Rate limiting per api key (simple in-memory)
-    key_hash = hashlib.sha256(api_key.encode()).hexdigest()
-    now = int(time.time())
-    window_start, count = RATE_LIMITS.get(key_hash, (now, 0))
-    if now - window_start >= RATE_LIMIT_WINDOW:
-        window_start = now
-        count = 0
-    count += 1
-    RATE_LIMITS[key_hash] = (window_start, count)
-    if count > RATE_LIMIT_MAX:
-        raise HTTPException(status_code=429, detail="Rate limit exceeded")
-
-    # Verify API key (we store the SHA256 hash in DB)
-    deployment = db.query(AgentDeployment).filter(
-        AgentDeployment.agent_id == agent_id,
-        AgentDeployment.api_key == key_hash,
-        AgentDeployment.is_active == True
-    ).first()
-
-    if not deployment:
-        raise HTTPException(status_code=401, detail="Clé API invalide ou agent non déployé")
-
-    # Get agent info
-    agent = db.query(Agent).filter(Agent.id == agent_id).first()
-    if not agent:
-        raise HTTPException(status_code=404, detail="Agent non trouvé")
-
     try:
-        # Call OpenAI with agent info
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": f"Tu es {agent.name}, un expert: {agent.role}. Backstory: {agent.backstory}"},
-                {"role": "user", "content": question}
-            ],
-            max_tokens=1000
-        )
+        # Read and parse the body manually to handle encoding issues
+        body = await request.body()
+        
+        # Try to decode with UTF-8, fallback to latin-1 if needed
+        try:
+            body_decoded = body.decode()
+        except UnicodeDecodeError:
+            body_decoded = body.decode('latin-1')
+            # Re-encode as UTF-8
+            body = body_decoded.encode('utf-8')
+        
+        # Parse JSON
+        import json
+        parsed = json.loads(body_decoded)
+        
+        # Extract fields
+        api_key = parsed.get("api_key")
+        question = parsed.get("question")
 
-        return {
-            "status": "success",
-            "agent_id": agent_id,
-            "question": question,
-            "answer": response.choices[0].message.content,
-            "timestamp": str(uuid.uuid4())
-        }
+        # Prefer Authorization header if present
+        if not api_key and authorization:
+            if authorization.lower().startswith("bearer "):
+                api_key = authorization.split(" ", 1)[1].strip()
+
+        if not api_key or not question:
+            raise HTTPException(status_code=400, detail="api_key et question requis")
+
+        # Rate limiting per api key (simple in-memory)
+        key_hash = hashlib.sha256(api_key.encode()).hexdigest()
+        now = int(time.time())
+        window_start, count = RATE_LIMITS.get(key_hash, (now, 0))
+        if now - window_start >= RATE_LIMIT_WINDOW:
+            window_start = now
+            count = 0
+        count += 1
+        RATE_LIMITS[key_hash] = (window_start, count)
+        if count > RATE_LIMIT_MAX:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded")
+
+        # Verify API key (we store the SHA256 hash in DB)
+        deployment = db.query(AgentDeployment).filter(
+            AgentDeployment.agent_id == agent_id,
+            AgentDeployment.api_key == key_hash,
+            AgentDeployment.is_active == True
+        ).first()
+
+        if not deployment:
+            raise HTTPException(status_code=401, detail="Clé API invalide ou agent non déployé")
+
+        # Get agent info
+        agent = db.query(Agent).filter(Agent.id == agent_id).first()
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent non trouvé")
+
+        try:
+            # Call OpenAI with agent info
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": f"Tu es {agent.name}, un expert: {agent.role}. Backstory: {agent.backstory}"},
+                    {"role": "user", "content": question}
+                ],
+                max_tokens=1000
+            )
+
+            return {
+                "status": "success",
+                "agent_id": agent_id,
+                "question": question,
+                "answer": response.choices[0].message.content,
+                "timestamp": str(uuid.uuid4())
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "agent_id": agent_id,
+                "error": str(e),
+                "timestamp": str(uuid.uuid4())
+            }
+    except HTTPException:
+        raise
     except Exception as e:
-        return {
-            "status": "error",
-            "agent_id": agent_id,
-            "error": str(e),
-            "timestamp": str(uuid.uuid4())
-        }
+        # Log parsing errors and raise a clear HTTPException
+        import traceback
+        print("=== ERROR PARSING /ask ===")
+        print(traceback.format_exc())
+        raise HTTPException(status_code=400, detail=f"Invalid request body: {str(e)}")
 
 
 @router.delete("/deployments/{deployment_id}")

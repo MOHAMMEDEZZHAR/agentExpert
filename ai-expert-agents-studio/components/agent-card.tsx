@@ -1,6 +1,8 @@
-import { Bot, Target, BookOpen, Zap, Loader2 } from "lucide-react"
+"use client"
+
+import React, { useState, useEffect } from "react"
+import { Zap, Trash2, Copy, Bot, Target, BookOpen, Loader2 } from "lucide-react"
 import type { Agent } from "@/lib/api"
-import { useState } from "react"
 
 interface AgentCardProps {
   agent: Agent
@@ -10,6 +12,26 @@ interface AgentCardProps {
 export function AgentCard({ agent, onDelete }: AgentCardProps) {
   const [deploying, setDeploying] = useState(false)
   const [deployed, setDeployed] = useState(false)
+  const [apiKey, setApiKey] = useState<string | null>(null)
+  const [copied, setCopied] = useState(false)
+
+  // Vérifier si l'agent est déjà déployé au chargement
+  useEffect(() => {
+    const checkDeployment = async () => {
+      try {
+        const token = typeof window !== "undefined" ? localStorage.getItem("token") : null
+        const res = await fetch(`http://localhost:8000/api/agents/${agent.id}/deployment`, {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        })
+        if (res.ok) {
+          setDeployed(true)
+        }
+      } catch (err) {
+        // L'agent n'est pas déployé, c'est normal
+      }
+    }
+    checkDeployment()
+  }, [agent.id])
 
   const handleDelete = async (id: string) => {
     if (!confirm("Supprimer cet agent pour toujours ?")) return
@@ -31,6 +53,12 @@ export function AgentCard({ agent, onDelete }: AgentCardProps) {
   }
 
   const handleDeploy = async () => {
+    // Si l'agent est déjà déployé, afficher une alerte
+    if (deployed) {
+      alert("Cet agent est déjà déployé !")
+      return
+    }
+    
     setDeploying(true)
     try {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null
@@ -41,7 +69,10 @@ export function AgentCard({ agent, onDelete }: AgentCardProps) {
       const data = await res.json()
       if (res.ok) {
         setDeployed(true)
-        alert(`Agent déployé avec succès !\n\nClé API:\n${data.api_key}\n\nConsultez la page Déploiements pour plus d'options.`)
+        setApiKey(data.api_key)
+        alert(
+          "Agent déployé avec succès !\n\nLa clé API est maintenant affichée sous la carte de l'agent.\n\nCopiez d'abord votre clé API maintenant, puis allez sur la page Déploiements pour copier l'ID complet de votre agent."
+        )
       } else {
         alert(`Erreur: ${data.detail || "Impossible de déployer l'agent"}`)
       }
@@ -51,6 +82,13 @@ export function AgentCard({ agent, onDelete }: AgentCardProps) {
     } finally {
       setDeploying(false)
     }
+  }
+
+  const handleCopyApiKey = () => {
+    if (!apiKey) return
+    navigator.clipboard.writeText(apiKey)
+    setCopied(true)
+    setApiKey(null)
   }
 
   return (
@@ -101,6 +139,19 @@ export function AgentCard({ agent, onDelete }: AgentCardProps) {
           Supprimer
         </button>
       </div>
+      {apiKey && (
+        <div className="mt-4 p-3 bg-slate-900 text-xs rounded border border-slate-700 flex items-center gap-2">
+          <span className="text-gray-300">
+            Clé API : <span className="text-cyan-400 break-all">{apiKey}</span>
+          </span>
+          <button
+            onClick={handleCopyApiKey}
+            className="ml-auto px-2 py-1 text-xs bg-slate-800 hover:bg-slate-700 rounded text-gray-100"
+          >
+            {copied ? "Copié" : "Copier"}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

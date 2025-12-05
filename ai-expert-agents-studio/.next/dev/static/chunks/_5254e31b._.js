@@ -7,20 +7,48 @@ __turbopack_context__.s([
     ()=>AgentCard
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/zap.js [app-client] (ecmascript) <export default as Zap>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/bot.js [app-client] (ecmascript) <export default as Bot>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/target.js [app-client] (ecmascript) <export default as Target>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/book-open.js [app-client] (ecmascript) <export default as BookOpen>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/zap.js [app-client] (ecmascript) <export default as Zap>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript) <export default as Loader2>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+"use client";
 ;
 ;
 function AgentCard({ agent, onDelete }) {
     _s();
     const [deploying, setDeploying] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [deployed, setDeployed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [apiKey, setApiKey] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [copied, setCopied] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Vérifier si l'agent est déjà déployé au chargement
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "AgentCard.useEffect": ()=>{
+            const checkDeployment = {
+                "AgentCard.useEffect.checkDeployment": async ()=>{
+                    try {
+                        const token = ("TURBOPACK compile-time truthy", 1) ? localStorage.getItem("token") : "TURBOPACK unreachable";
+                        const res = await fetch(`http://localhost:8000/api/agents/${agent.id}/deployment`, {
+                            headers: token ? {
+                                Authorization: `Bearer ${token}`
+                            } : {}
+                        });
+                        if (res.ok) {
+                            setDeployed(true);
+                        }
+                    } catch (err) {
+                    // L'agent n'est pas déployé, c'est normal
+                    }
+                }
+            }["AgentCard.useEffect.checkDeployment"];
+            checkDeployment();
+        }
+    }["AgentCard.useEffect"], [
+        agent.id
+    ]);
     const handleDelete = async (id)=>{
         if (!confirm("Supprimer cet agent pour toujours ?")) return;
         try {
@@ -42,6 +70,11 @@ function AgentCard({ agent, onDelete }) {
         }
     };
     const handleDeploy = async ()=>{
+        // Si l'agent est déjà déployé, afficher une alerte
+        if (deployed) {
+            alert("Cet agent est déjà déployé !");
+            return;
+        }
         setDeploying(true);
         try {
             const token = ("TURBOPACK compile-time truthy", 1) ? localStorage.getItem("token") : "TURBOPACK unreachable";
@@ -54,7 +87,8 @@ function AgentCard({ agent, onDelete }) {
             const data = await res.json();
             if (res.ok) {
                 setDeployed(true);
-                alert(`Agent déployé avec succès !\n\nClé API:\n${data.api_key}\n\nConsultez la page Déploiements pour plus d'options.`);
+                setApiKey(data.api_key);
+                alert("Agent déployé avec succès !\n\nLa clé API est maintenant affichée sous la carte de l'agent.\n\nCopiez d'abord votre clé API maintenant, puis allez sur la page Déploiements pour copier l'ID complet de votre agent.");
             } else {
                 alert(`Erreur: ${data.detail || "Impossible de déployer l'agent"}`);
             }
@@ -64,6 +98,12 @@ function AgentCard({ agent, onDelete }) {
         } finally{
             setDeploying(false);
         }
+    };
+    const handleCopyApiKey = ()=>{
+        if (!apiKey) return;
+        navigator.clipboard.writeText(apiKey);
+        setCopied(true);
+        setApiKey(null);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group",
@@ -77,12 +117,12 @@ function AgentCard({ agent, onDelete }) {
                             className: "w-6 h-6 text-primary"
                         }, void 0, false, {
                             fileName: "[project]/components/agent-card.tsx",
-                            lineNumber: 60,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 59,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -93,7 +133,7 @@ function AgentCard({ agent, onDelete }) {
                                 children: agent.name
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 63,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -101,19 +141,19 @@ function AgentCard({ agent, onDelete }) {
                                 children: agent.role
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 64,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 62,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/agent-card.tsx",
-                lineNumber: 58,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,7 +166,7 @@ function AgentCard({ agent, onDelete }) {
                                 className: "w-4 h-4 text-muted-foreground mt-1 shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 70,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -134,13 +174,13 @@ function AgentCard({ agent, onDelete }) {
                                 children: agent.goal
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 71,
+                                lineNumber: 109,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 69,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -150,7 +190,7 @@ function AgentCard({ agent, onDelete }) {
                                 className: "w-4 h-4 text-muted-foreground mt-1 shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 74,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -158,19 +198,19 @@ function AgentCard({ agent, onDelete }) {
                                 children: agent.backstory
                             }, void 0, false, {
                                 fileName: "[project]/components/agent-card.tsx",
-                                lineNumber: 75,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 73,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/agent-card.tsx",
-                lineNumber: 68,
+                lineNumber: 106,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -186,7 +226,7 @@ function AgentCard({ agent, onDelete }) {
                                     className: "w-4 h-4 animate-spin"
                                 }, void 0, false, {
                                     fileName: "[project]/components/agent-card.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this),
                                 "Déploiement..."
@@ -197,7 +237,7 @@ function AgentCard({ agent, onDelete }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/agent-card.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 130,
                                     columnNumber: 15
                                 }, this),
                                 "Déployer"
@@ -205,7 +245,7 @@ function AgentCard({ agent, onDelete }) {
                         }, void 0, true)
                     }, void 0, false, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 80,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -214,23 +254,59 @@ function AgentCard({ agent, onDelete }) {
                         children: "Supprimer"
                     }, void 0, false, {
                         fileName: "[project]/components/agent-card.tsx",
-                        lineNumber: 97,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/agent-card.tsx",
-                lineNumber: 79,
+                lineNumber: 117,
                 columnNumber: 7
+            }, this),
+            apiKey && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mt-4 p-3 bg-slate-900 text-xs rounded border border-slate-700 flex items-center gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "text-gray-300",
+                        children: [
+                            "Clé API : ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-cyan-400 break-all",
+                                children: apiKey
+                            }, void 0, false, {
+                                fileName: "[project]/components/agent-card.tsx",
+                                lineNumber: 145,
+                                columnNumber: 23
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/agent-card.tsx",
+                        lineNumber: 144,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleCopyApiKey,
+                        className: "ml-auto px-2 py-1 text-xs bg-slate-800 hover:bg-slate-700 rounded text-gray-100",
+                        children: copied ? "Copié" : "Copier"
+                    }, void 0, false, {
+                        fileName: "[project]/components/agent-card.tsx",
+                        lineNumber: 147,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/agent-card.tsx",
+                lineNumber: 143,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/agent-card.tsx",
-        lineNumber: 57,
+        lineNumber: 95,
         columnNumber: 5
     }, this);
 }
-_s(AgentCard, "gMBdkcCSzFOcpaFdiSVp6tFeXK4=");
+_s(AgentCard, "patZZK8iYbN1hstQes9NBguFLe8=");
 _c = AgentCard;
 var _c;
 __turbopack_context__.k.register(_c, "AgentCard");

@@ -41,9 +41,12 @@ function DeploymentsPage() {
             setLoading(false);
         }
     };
-    const copyToClipboard = (text, id)=>{
+    const copyToClipboard = (text, id, options)=>{
         navigator.clipboard.writeText(text);
         setCopied(id);
+        if (options?.hideTextAfterCopy && options.clearText) {
+            options.clearText();
+        }
         setTimeout(()=>setCopied(null), 2000);
     };
     const deleteDeployment = async (id)=>{
@@ -69,7 +72,7 @@ function DeploymentsPage() {
         children: "Chargement..."
     }, void 0, false, {
         fileName: "[project]/app/deployments/page.tsx",
-        lineNumber: 58,
+        lineNumber: 63,
         columnNumber: 23
     }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -84,7 +87,7 @@ function DeploymentsPage() {
                             className: "w-8 h-8 text-cyan-600"
                         }, void 0, false, {
                             fileName: "[project]/app/deployments/page.tsx",
-                            lineNumber: 64,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -92,13 +95,13 @@ function DeploymentsPage() {
                             children: "Déploiements d'agents"
                         }, void 0, false, {
                             fileName: "[project]/app/deployments/page.tsx",
-                            lineNumber: 65,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/deployments/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -108,7 +111,7 @@ function DeploymentsPage() {
                         children: "Aucun agent déployé pour le moment"
                     }, void 0, false, {
                         fileName: "[project]/app/deployments/page.tsx",
-                        lineNumber: 70,
+                        lineNumber: 75,
                         columnNumber: 13
                     }, this) : deployments.map((dep)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-6",
@@ -122,12 +125,11 @@ function DeploymentsPage() {
                                                     className: "text-lg font-semibold text-cyan-600",
                                                     children: [
                                                         "Agent ID: ",
-                                                        dep.agent_id.substring(0, 8),
-                                                        "..."
+                                                        dep.agent_id
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/deployments/page.tsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 81,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -135,13 +137,13 @@ function DeploymentsPage() {
                                                     children: dep.created_at ? new Date(dep.created_at).toLocaleString("fr-FR") : "-"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/deployments/page.tsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 82,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 75,
+                                            lineNumber: 80,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -149,13 +151,54 @@ function DeploymentsPage() {
                                             children: dep.is_active ? "Actif" : "Inactif"
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 84,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/deployments/page.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 79,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bg-slate-900 p-3 rounded mb-4 border border-slate-700 flex items-center gap-2 text-xs",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-gray-300 flex-1 break-all",
+                                            children: [
+                                                "ID complet de l'agent : ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-cyan-400",
+                                                    children: dep.agent_id
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/deployments/page.tsx",
+                                                    lineNumber: 90,
+                                                    columnNumber: 92
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/deployments/page.tsx",
+                                            lineNumber: 90,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>copyToClipboard(dep.agent_id, `${dep.deployment_id}-agent-id`, {
+                                                    hideTextAfterCopy: true,
+                                                    clearText: ()=>{
+                                                        dep.agent_id = "";
+                                                    }
+                                                }),
+                                            className: "px-2 py-1 text-xs bg-slate-800 hover:bg-slate-700 rounded text-gray-100",
+                                            children: copied === `${dep.deployment_id}-agent-id` ? "Copié" : "Copier"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/deployments/page.tsx",
+                                            lineNumber: 91,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/deployments/page.tsx",
+                                    lineNumber: 89,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,7 +209,7 @@ function DeploymentsPage() {
                                             children: "Clé API (empreinte) :"
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 107,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -177,7 +220,7 @@ function DeploymentsPage() {
                                                     children: dep.api_key_fingerprint ?? dep.api_key ?? '—'
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/deployments/page.tsx",
-                                                    lineNumber: 87,
+                                                    lineNumber: 109,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -187,24 +230,24 @@ function DeploymentsPage() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/deployments/page.tsx",
-                                                        lineNumber: 92,
+                                                        lineNumber: 114,
                                                         columnNumber: 55
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/deployments/page.tsx",
-                                                        lineNumber: 92,
+                                                        lineNumber: 114,
                                                         columnNumber: 87
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/deployments/page.tsx",
-                                                    lineNumber: 88,
+                                                    lineNumber: 110,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 86,
+                                            lineNumber: 108,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -212,13 +255,13 @@ function DeploymentsPage() {
                                             children: "Remarque : la clé complète est affichée une seule fois au moment de la création. Si vous l'avez perdue, régénérez-la."
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 117,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/deployments/page.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 106,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -229,18 +272,18 @@ function DeploymentsPage() {
                                             children: "Exemple d'appel API (header Authorization - RECOMMANDÉE):"
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 121,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
                                             className: "text-cyan-400 text-xs break-all",
-                                            children: `curl -X POST http://localhost:8000/api/agents/cbbc939d-5f46-490e-9816-da15808bd80c/ask \\
+                                            children: `curl -X POST http://localhost:8000/api/agents/<TON_AGENT_ID_ICI>/ask \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer <VOTRE_CLE_API_ICI>" \\
   -d '{"question": "Ton question ici"}'`
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 122,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -252,20 +295,35 @@ function DeploymentsPage() {
                                                     children: "<VOTRE_CLE_API_ICI>"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/deployments/page.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 129,
                                                     columnNumber: 33
                                                 }, this),
-                                                " par votre clé API (affichée une seule fois à la création)"
+                                                " par votre clé API (affichée une seule fois à la création)",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/app/deployments/page.tsx",
+                                                    lineNumber: 130,
+                                                    columnNumber: 21
+                                                }, this),
+                                                "• Remplacez ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
+                                                    className: "text-cyan-300",
+                                                    children: "<TON_AGENT_ID_ICI>"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/deployments/page.tsx",
+                                                    lineNumber: 131,
+                                                    columnNumber: 33
+                                                }, this),
+                                                " par l'ID complet de votre agent (celui affiché plus haut, que vous pouvez copier)"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 128,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/deployments/page.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 120,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -276,36 +334,36 @@ function DeploymentsPage() {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/app/deployments/page.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 139,
                                             columnNumber: 19
                                         }, this),
                                         "Supprimer"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/deployments/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 135,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, dep.deployment_id, true, {
                             fileName: "[project]/app/deployments/page.tsx",
-                            lineNumber: 73,
+                            lineNumber: 78,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/app/deployments/page.tsx",
-                    lineNumber: 68,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/deployments/page.tsx",
-            lineNumber: 62,
+            lineNumber: 67,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/deployments/page.tsx",
-        lineNumber: 61,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 }

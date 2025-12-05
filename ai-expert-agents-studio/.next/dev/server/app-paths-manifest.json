@@ -1,7 +1,4 @@
 {
   "/dashboard/agents/page": "app/dashboard/agents/page.js",
-  "/dashboard/results/page": "app/dashboard/results/page.js",
-  "/dashboard/run/page": "app/dashboard/run/page.js",
-  "/deployments/page": "app/deployments/page.js",
-  "/history/page": "app/history/page.js"
+  "/deployments/page": "app/deployments/page.js"
 }

@@ -1,22 +1,32 @@
-[00:00:01.636] Server  LOG      ✓ Ready in 1004ms
-[00:00:05.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.023] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:06.023] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
-[00:00:06.023] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886099983}
-[00:00:08.026] Browser ERROR   Erreur lors du chargement des agents: {}
-[00:00:08.027] Browser ERROR   Erreur lors du chargement des agents: {}
-[00:00:13.495] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:13.638] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:13.639] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
-[00:00:13.639] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886108254}
-[00:00:20.286] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886114901}
-[00:00:25.786] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886120396}
-[00:00:34.258] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886128872}
-[00:00:37.414] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886132017}
-[00:00:44.957] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886139577}
-[00:00:47.083] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886141703}
-[00:00:49.365] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886143975}
-[00:00:51.485] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886146094}
-[00:00:53.546] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886148166}
-[00:00:59.358] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886153964}
-[00:01:13.586] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764886168207}
+[00:00:02.817] Server  LOG      ✓ Ready in 1825ms
+[00:00:05.883] Server  LOG      ○ Compiling /deployments ...
+[00:00:07.722] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.867] Browser LOG     Chargement depuis localStorage: []
+[00:00:07.867] Browser LOG     IDs masqués chargés: []
+[00:00:07.867] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:07.867] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:07.867] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:07.868] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/deployments","route":"/deployments"}
+[00:00:07.868] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958865815}
+[00:00:08.202] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:11.478] Browser LOG     Sauvegarde dans localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:13.748] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.893] Browser LOG     Chargement depuis localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:13.893] Browser LOG     IDs masqués chargés: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:13.893] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:13.893] Browser LOG     Sauvegarde dans localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/deployments","route":"/deployments"}
+[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958871834}
+[00:00:14.176] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:16.960] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958874867}
+[00:00:19.696] Browser LOG     Chargement depuis localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:19.696] Browser LOG     IDs masqués chargés: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
+[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:19.696] Browser LOG     Chargement depuis localStorage: []
+[00:00:19.696] Browser LOG     IDs masqués chargés: []
+[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:19.696] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958877603}
+[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
+[00:00:19.696] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:19.696] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]

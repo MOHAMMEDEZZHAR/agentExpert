@@ -135,7 +135,7 @@ __turbopack_context__.s([
 "use client";
 async function exportToPDF(topic, result) {
     try {
-        const { jsPDF } = await __turbopack_context__.A("[project]/node_modules/jspdf/dist/jspdf.es.min.js [app-ssr] (ecmascript, async loader)");
+        const { jsPDF } = await __turbopack_context__.A("[project]/node_modules/jspdf/dist/jspdf.node.min.js [app-ssr] (ecmascript, async loader)");
         const html2canvas = (await __turbopack_context__.A("[project]/node_modules/html2canvas/dist/html2canvas.esm.js [app-ssr] (ecmascript, async loader)")).default;
         // Create temporary div with styled content
         const tempDiv = document.createElement("div");
