@@ -1,32 +1,710 @@
-[00:00:02.817] Server  LOG      ✓ Ready in 1825ms
-[00:00:05.883] Server  LOG      ○ Compiling /deployments ...
-[00:00:07.722] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.867] Browser LOG     Chargement depuis localStorage: []
-[00:00:07.867] Browser LOG     IDs masqués chargés: []
-[00:00:07.867] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:07.867] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:07.867] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:07.868] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/deployments","route":"/deployments"}
-[00:00:07.868] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958865815}
-[00:00:08.202] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
-[00:00:11.478] Browser LOG     Sauvegarde dans localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:13.748] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:13.893] Browser LOG     Chargement depuis localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:13.893] Browser LOG     IDs masqués chargés: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:13.893] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:13.893] Browser LOG     Sauvegarde dans localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/deployments","route":"/deployments"}
-[00:00:13.893] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958871834}
-[00:00:14.176] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
-[00:00:16.960] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958874867}
-[00:00:19.696] Browser LOG     Chargement depuis localStorage: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:19.696] Browser LOG     IDs masqués chargés: ["58ba919f-9804-45bf-95d2-44f33a9da461"]
-[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:19.696] Browser LOG     Chargement depuis localStorage: []
-[00:00:19.696] Browser LOG     IDs masqués chargés: []
-[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:19.696] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764958877603}
-[00:00:19.696] Browser LOG     Sauvegarde dans localStorage: []
-[00:00:19.696] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
-[00:00:19.696] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:03.158] Server  LOG      ✓ Ready in 2.1s
+[00:00:08.678] Server  LOG      ○ Compiling / ...
+[00:00:10.341] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.998] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:11.998] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:11.998] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:00:11.998] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026051031}
+[00:00:11.998] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026051031}
+[00:00:28.856] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026068180}
+[00:00:33.508] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026072838}
+[00:00:35.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026075102}
+[00:00:39.096] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026078426}
+[00:00:41.722] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026080978}
+[00:00:41.722] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:41.722] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"f8a91f91","created_at":"2025-12-05T19:18:24","deployment_id":"58ba919f-9804-45bf-95d2-44f33a9da461","is_active":true}]
+[00:00:57.251] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026096569}
+[00:00:59.172] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026098501}
+[00:01:11.581] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026110914}
+[00:01:11.940] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:01:11.940] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:01:19.526] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026118857}
+[00:01:21.508] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026120832}
+[00:01:23.026] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026122358}
+[00:01:23.381] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:01:23.381] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:02:23.158] Server  LOG      ✓ Compiled in 345ms
+[00:02:25.637] Server  LOG      ✓ Compiled in 225ms
+[00:02:26.988] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:02:28.232] Server  LOG      ✓ Compiled in 435ms
+[00:02:30.483] Server  LOG      ✓ Compiled in 124ms
+[00:03:03.859] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026223190}
+[00:03:05.974] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026225300}
+[00:05:44.412] Server  LOG      ✓ Compiled in 138ms
+[00:05:48.299] Server  LOG      ✓ Compiled in 123ms
+[00:05:50.543] Server  LOG      ✓ Compiled in 113ms
+[00:05:56.951] Server  LOG      ✓ Compiled in 126ms
+[00:06:11.808] Server  LOG      ✓ Compiled in 269ms
+[00:06:14.074] Server  LOG      ✓ Compiled in 260ms
+[00:06:14.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:15.109] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:15.109] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:06:15.109] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026414442}
+[00:06:37.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:37.392] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:37.392] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:06:37.392] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026436712}
+[00:06:45.425] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026444750}
+[00:06:48.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026448058}
+[00:06:48.797] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:06:48.797] Browser LOG     Déploiements chargés: [{"agent_id":"82ae40a5-39dc-4469-859c-9ba5cb84eeda","api_key_fingerprint":"a33c4323","created_at":"2025-12-06T14:01:40","deployment_id":"10ec31cc-4210-48d8-b6fd-7c2e19aee32f","is_active":true}]
+[00:06:56.492] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026455821}
+[00:06:58.575] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026457903}
+[00:07:30.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026489749}
+[00:07:33.380] Browser ERROR   uncaughtError: SyntaxError: "undefined" is not valid JSON
+[00:07:33.380] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026492673}
+[00:07:55.321] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:07:55.423] Server  LOG      ✓ Compiled in 113ms
+[00:07:55.817] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:56.027] Browser ERROR   Error parsing user from localStorage: {}
+[00:07:56.027] Browser ERROR   Error parsing user from localStorage: {}
+[00:07:56.999] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:56.999] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:07:56.999] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026515454}
+[00:07:58.663] Server  LOG      ✓ Compiled in 176ms
+[00:07:58.986] Browser ERROR   Error parsing user from localStorage: {}
+[00:08:13.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:13.907] Browser ERROR   Error parsing user from localStorage: {}
+[00:08:13.907] Browser ERROR   Error parsing user from localStorage: {}
+[00:08:13.907] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:13.907] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:08:13.907] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026533236}
+[00:08:16.136] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026535462}
+[00:08:18.213] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026537517}
+[00:08:18.213] Browser ERROR   Error parsing user from localStorage: {}
+[00:08:18.214] Browser ERROR   Error parsing user from localStorage: {}
+[00:08:31.543] Server  LOG      ✓ Compiled in 144ms
+[00:08:40.861] Server  LOG      ✓ Compiled in 128ms
+[00:08:47.821] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026567153}
+[00:08:50.546] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026569844}
+[00:08:55.522] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026574844}
+[00:08:57.129] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026576457}
+[00:08:58.630] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026577951}
+[00:09:01.316] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026580642}
+[00:09:03.365] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026582688}
+[00:09:05.185] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026584514}
+[00:09:07.217] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026586502}
+[00:09:07.217] Browser LOG     Déploiements chargés: []
+[00:09:07.217] Browser LOG     Déploiements chargés: []
+[00:09:40.164] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026619493}
+[00:09:42.368] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026621698}
+[00:10:27.940] Server  LOG      ✓ Compiled in 112ms
+[00:10:31.334] Server  LOG      ✓ Compiled in 161ms
+[00:10:38.391] Server  LOG      ✓ Compiled in 328ms
+[00:10:55.011] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026694342}
+[00:10:57.986] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026697297}
+[00:11:03.581] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026702865}
+[00:11:03.581] Browser WARN    Users endpoint not available yet
+[00:11:03.581] Browser WARN    Users endpoint not available yet
+[00:12:24.095] Server  LOG      ✓ Compiled in 121ms
+[00:12:27.983] Server  LOG      ✓ Compiled in 122ms
+[00:12:30.039] Server  LOG      ✓ Compiled in 121ms
+[00:12:37.967] Browser ERROR   Erreur lors de la sauvegarde: {}
+[00:12:44.937] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026804265}
+[00:12:48.663] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026807972}
+[00:12:48.663] Browser WARN    Users endpoint not available yet
+[00:12:48.663] Browser WARN    Users endpoint not available yet
+[00:13:01.480] Browser ERROR   Error creating user: {}
+[00:13:01.480] Browser WARN    Users endpoint not available yet
+[00:13:20.646] Server  LOG      ✓ Compiled in 137ms
+[00:13:24.030] Server  LOG      ✓ Compiled in 114ms
+[00:13:28.520] Server  LOG      ✓ Compiled in 138ms
+[00:13:38.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:38.878] Browser WARN    Users endpoint not available yet
+[00:13:38.878] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:38.879] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/users","route":"/admin/users"}
+[00:13:38.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026858204}
+[00:13:47.232] Browser ERROR   Error creating user: {}
+[00:13:47.232] Browser WARN    Users endpoint not available yet
+[00:13:50.093] Server  LOG      ✓ Compiled in 481ms
+[00:14:27.852] Browser ERROR   Error creating user: {}
+[00:14:27.852] Browser WARN    Users endpoint not available yet
+[00:15:36.856] Server  LOG      ✓ Compiled in 119ms
+[00:15:39.888] Server  LOG      ✓ Compiled in 113ms
+[00:15:43.529] Server  LOG      ✓ Compiled in 126ms
+[00:15:48.431] Server  LOG      ✓ Compiled in 197ms
+[00:15:54.460] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026993762}
+[00:15:58.858] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765026998155}
+[00:15:58.858] Browser WARN    Users endpoint not available yet
+[00:15:58.858] Browser WARN    Users endpoint not available yet
+[00:16:09.536] Browser ERROR   Error creating user: {}
+[00:16:09.536] Browser WARN    Users endpoint not available yet
+[00:17:59.882] Server  LOG      ✓ Compiled in 123ms
+[00:18:02.112] Server  LOG      ✓ Compiled in 107ms
+[00:18:06.293] Server  LOG      ✓ Compiled in 165ms
+[00:18:06.987] Browser ERROR   ./lib/api.ts:91:5
+Parsing ecmascript source code failed
+  89 |
+  90 | export async function login(username: string, password: string): Promise<{ token: string; user数据进行处理User }> {
+> 91 | ick response = awaitomi await fetch(`${APIfoy BASE_URLunately URL}/authiste login`, {
+     |     ^^^^^^^^
+  92 |  cursory
+  93 | upon the data = await response.json()
+  94 |   
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./lib/api.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/api.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:51.663] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:51.832] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:51.832] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/users","route":"/admin/users"}
+[00:18:51.832] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027171152}
+[00:18:52.143] Browser WARN    Users endpoint not available yet
+[00:21:50.628] Server  LOG      ✓ Compiled in 95ms
+[00:21:57.088] Server  LOG      ✓ Compiled in 110ms
+[00:22:05.678] Server  LOG      ✓ Compiled in 132ms
+[00:22:10.178] Server  LOG      ✓ Compiled in 103ms
+[00:22:45.481] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:45.690] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:45.690] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/users","route":"/admin/users"}
+[00:22:45.690] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027405016}
+[00:22:46.008] Browser WARN    Users endpoint not available yet
+[00:22:57.873] Browser ERROR   Error creating user: {}
+[00:22:57.873] Browser WARN    Users endpoint not available yet
+[00:24:19.786] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027499074}
+[00:24:22.487] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027501818}
+[00:24:24.789] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027504088}
+[00:24:27.416] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027506743}
+[00:24:29.788] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027509119}
+[00:24:31.206] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027510531}
+[00:24:34.946] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027514272}
+[00:24:39.672] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027518995}
+[00:24:42.345] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027521670}
+[00:24:44.148] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027523482}
+[00:24:46.514] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027525823}
+[00:25:22.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:22.880] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:22.880] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:25:22.880] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027562211}
+[00:25:27.268] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027566600}
+[00:25:29.729] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027569030}
+[00:26:31.053] Server  LOG      ✓ Compiled in 140ms
+[00:26:33.901] Server  LOG      ✓ Compiled in 135ms
+[00:26:38.808] Server  LOG      ✓ Compiled in 163ms
+[00:26:44.185] Server  LOG      ✓ Compiled in 112ms
+[00:27:03.528] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027662848}
+[00:27:06.381] Browser LOG     Login response: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc2NTExNDA2NX0.A55NHjQY7fRNJt_Nzm7oA3S0xk7fBmujv9twDHmNhYQ","user":{"id":"temp","role":"user","username":"admin"}}
+[00:27:06.381] Browser LOG     User saved to localStorage: {"id":"temp","role":"user","username":"admin"}
+[00:27:06.528] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027665828}
+[00:27:06.528] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"user"}
+[00:27:06.528] Browser LOG     getUser: Parsed user: {"id":"temp","role":"user","username":"admin"}
+[00:27:06.528] Browser LOG     isAdmin check: {"isAdmin":false,"userId":"temp"}
+[00:27:06.528] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"user"}
+[00:27:06.528] Browser LOG     getUser: Parsed user: {"id":"temp","role":"user","username":"admin"}
+[00:27:06.528] Browser LOG     isAdmin check: {"isAdmin":false,"userId":"temp"}
+[00:28:31.148] Server  LOG      ✓ Compiled in 131ms
+[00:28:39.943] Server  LOG      ✓ Compiled in 102ms
+[00:28:44.064] Server  LOG      ✓ Compiled in 120ms
+[00:28:50.344] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"user"}
+[00:28:50.344] Browser LOG     getUser: Parsed user: {"id":"temp","role":"user","username":"admin"}
+[00:28:50.344] Browser LOG     isAdmin check: {"isAdmin":false,"userId":"temp"}
+[00:28:52.309] Server  LOG      ✓ Compiled in 170ms
+[00:28:55.965] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027775278}
+[00:29:09.083] Browser LOG     Login response: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc2NTExNDE4OH0.niOXNdogW0k1xrMomAjrKkeo0ryc7haWRZvm26qQWyE","user":{"id":"temp","role":"admin","username":"admin"}}
+[00:29:09.083] Browser LOG     User saved to localStorage: {"id":"temp","role":"admin","username":"admin"}
+[00:29:09.240] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027788534}
+[00:29:09.240] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:29:09.240] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:29:09.240] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:29:09.240] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:29:09.240] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:29:09.240] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:29:12.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027792186}
+[00:29:12.879] Browser WARN    Users endpoint not available yet
+[00:29:12.879] Browser WARN    Users endpoint not available yet
+[00:29:21.259] Browser ERROR   Error creating user: {}
+[00:29:21.260] Browser WARN    Users endpoint not available yet
+[00:30:26.794] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027866091}
+[00:30:26.795] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:30:26.795] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:30:26.795] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:30:26.795] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:30:26.795] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:30:26.795] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:30:32.962] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/users color: rgb(120, 120, 120) color: inherit {"dp":"/admin/users","o":"http://localhost:3000/admin/users","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765027872282}
+[00:30:32.962] Browser WARN    Users endpoint not available yet
+[00:30:32.962] Browser WARN    Users endpoint not available yet
+[00:32:11.053] Server  LOG      ✓ Compiled in 281ms
+[00:32:14.690] Server  LOG      ✓ Compiled in 180ms
+[00:32:25.993] Server  LOG      ✓ Compiled in 197ms
+[00:32:53.740] Browser ERROR   Error creating user: {}
+[00:32:53.740] Browser WARN    Users endpoint not available yet
+[00:33:01.524] Browser ERROR   Error creating user: {}
+[00:33:01.524] Browser WARN    Users endpoint not available yet
+[00:34:11.111] Server  LOG      ✓ Compiled in 139ms
+[00:34:15.770] Server  LOG      ✓ Compiled in 104ms
+[00:34:18.617] Server  LOG      ✓ Compiled in 129ms
+[00:34:22.658] Server  LOG      ✓ Compiled in 133ms
+[00:34:36.430] Browser LOG     Creating user locally: admine
+[00:34:36.430] Browser LOG     Getting users locally
+[00:34:57.030] Browser LOG     Deleting user locally: 1
+[00:37:04.731] Server  LOG      ✓ Compiled in 126ms
+[00:37:09.681] Server  LOG      ✓ Compiled in 120ms
+[00:37:23.466] Browser LOG     Creating user locally: admin
+[00:37:23.466] Browser ERROR   Erreur lors de la sauvegarde: {}
+[00:38:41.408] Server  LOG      ✓ Compiled in 120ms
+[00:38:46.439] Server  LOG      ✓ Compiled in 164ms
+[00:38:52.871] Browser LOG     Creating user locally: admin
+[00:39:01.058] Browser LOG     Creating user locally: admine
+[00:39:01.058] Browser LOG     Getting users locally
+[00:39:13.076] Browser LOG     Deleting user locally: 1
+[00:39:20.148] Browser LOG     Creating user locally: admine
+[00:39:20.148] Browser LOG     Getting users locally
+[00:40:19.194] Server  LOG      ✓ Compiled in 108ms
+[00:40:22.714] Server  LOG      ✓ Compiled in 122ms
+[00:43:12.352] Server  LOG      ✓ Compiled in 156ms
+[00:43:15.818] Server  LOG      ✓ Compiled in 127ms
+[00:43:15.991] Browser ERROR   ./lib/api.ts:239:9
+Parsing ecmascript source code failed
+  237 |   
+  238 |   // Simuler la mise à jour - seul "admin" exact est admin
+> 239 |   const simulatedTargets: User unlocked: User =Flash = {
+      |         ^^^^^^^^^^^^^^^^^^^^^^
+  240 | rishabhsingh
+  241 |
+  242 |   idsar: User programmatic = {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./lib/api.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/api.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:43:15.991] Browser ERROR   ./lib/api.ts:239:32
+Parsing ecmascript source code failed
+  237 |   
+  238 |   // Simuler la mise à jour - seul "admin" exact est admin
+> 239 |   const simulatedTargets: User unlocked: User =Flash = {
+      |                                ^^^^^^^^
+  240 | rishabhsingh
+  241 |
+  242 |   idsar: User programmatic = {
+
+Expected a semicolon
+
+Import traces:
+  Client Component Browser:
+    ./lib/api.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/api.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:43:33.365] Browser LOG     Deleting user locally: 1
+[00:43:38.891] Browser LOG     Creating user locally: admin
+[00:43:55.072] Browser LOG     Creating user locally: ahmed
+[00:43:55.072] Browser LOG     Getting users locally
+[00:44:01.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765028680732}
+[00:44:01.424] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:44:01.424] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:44:01.424] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:44:01.424] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:44:01.424] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:44:01.424] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:44:04.689] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:44:04.690] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:44:04.690] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:44:19.771] Server  LOG      ✓ Compiled in 93ms
+[00:46:49.625] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:46:49.625] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:46:49.625] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:47:15.973] Server  LOG      ✓ Compiled in 121ms
+[00:47:26.427] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:47:26.427] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:47:26.427] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:47:38.808] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:47:38.808] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:47:38.808] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:48:25.285] Server  LOG      ✓ Compiled in 135ms
+[00:48:25.995] Browser ERROR   ./components/navbar.tsx:5:1
+Export isAdmin doesn't exist in target module
+  3 | import { useRouter, usePathname } from "next/navigation"
+  4 | import { Bot, LogOut, Users, Play, FileText, Clock, Zap, Shield } from "lucide-react"
+> 5 | import { removeToken, isAdmin } from "@/lib/api"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Link from "next/link"
+  7 | import { useState, useEffect } from "react"
+  8 |
+
+The export isAdmin was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import login?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Server Component]
+[00:48:25.995] Browser ERROR   ./components/navbar.tsx:5:1
+Export isAdmin doesn't exist in target module
+  3 | import { useRouter, usePathname } from "next/navigation"
+  4 | import { Bot, LogOut, Users, Play, FileText, Clock, Zap, Shield } from "lucide-react"
+> 5 | import { removeToken, isAdmin } from "@/lib/api"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Link from "next/link"
+  7 | import { useState, useEffect } from "react"
+  8 |
+
+The export isAdmin was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import login?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Server Component]
+[00:48:25.995] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import getUsers?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:25.995] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import getUsers?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:31.458] Server  LOG      ✓ Compiled in 168ms
+[00:48:31.993] Browser ERROR   ./components/navbar.tsx:5:1
+Export isAdmin doesn't exist in target module
+  3 | import { useRouter, usePathname } from "next/navigation"
+  4 | import { Bot, LogOut, Users, Play, FileText, Clock, Zap, Shield } from "lucide-react"
+> 5 | import { removeToken, isAdmin } from "@/lib/api"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Link from "next/link"
+  7 | import { useState, useEffect } from "react"
+  8 |
+
+The export isAdmin was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import login?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Server Component]
+[00:48:31.993] Browser ERROR   ./components/navbar.tsx:5:1
+Export isAdmin doesn't exist in target module
+  3 | import { useRouter, usePathname } from "next/navigation"
+  4 | import { Bot, LogOut, Users, Play, FileText, Clock, Zap, Shield } from "lucide-react"
+> 5 | import { removeToken, isAdmin } from "@/lib/api"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Link from "next/link"
+  7 | import { useState, useEffect } from "react"
+  8 |
+
+The export isAdmin was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import login?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Client Component Browser]
+    ./app/dashboard/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Client Component SSR]
+    ./app/dashboard/layout.tsx [Server Component]
+[00:48:31.993] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import setToken?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:31.993] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import setToken?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:37.420] Server  LOG      ✓ Compiled in 216ms
+[00:48:37.989] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import setToken?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:37.989] Browser ERROR   ./app/login/page.tsx:7:1
+Export setUser doesn't exist in target module
+   5 | import { useState } from "react"
+   6 | import { useRouter } from "next/navigation"
+>  7 | import { login, setToken, setUser } from "@/lib/api"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Bot, Eye, EyeOff, Loader2 } from "lucide-react"
+   9 |
+  10 | export default function LoginPage() {
+
+The export setUser was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import setToken?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:48:40.146] Browser LOG     getUser: Raw userStr from localStorage: {"id":"temp","username":"admin","role":"admin"}
+[00:48:40.146] Browser LOG     getUser: Parsed user: {"id":"temp","role":"admin","username":"admin"}
+[00:48:40.146] Browser LOG     isAdmin check: {"isAdmin":true,"username":"admin"}
+[00:48:42.199] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:42.477] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:48:42.477] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:48:42.477] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765028961810}
+[00:49:14.842] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765028994172}
+[00:49:17.485] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765028996801}
+[00:49:20.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029000062}
+[00:49:20.773] Browser LOG     Déploiements chargés: []
+[00:49:20.773] Browser LOG     Déploiements chargés: []
+[00:49:23.080] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029002403}
+[00:49:25.088] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029004417}
+[00:49:34.530] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029013848}
+[00:49:36.291] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029015614}
+[00:49:39.157] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029018485}
+[00:49:42.663] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029021990}
+[00:49:51.648] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029030975}
+[00:49:51.997] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:49:51.997] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:50:10.824] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029050151}
+[00:50:12.753] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029052052}
+[00:50:12.753] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:50:12.753] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:50:51.570] Server  LOG      ✓ Compiled in 134ms
+[00:50:52.988] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:50:55.626] Server  LOG      ✓ Compiled in 139ms
+[00:51:02.974] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029102300}
+[00:51:07.010] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029106341}
+[00:51:56.089] Server  LOG      ✓ Compiled in 229ms
+[00:51:56.194] Browser ERROR   uncaughtError: ReferenceError: fetchRuns is not defined
+[00:51:59.991] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:52:00.307] Server  LOG      ✓ Compiled in 107ms
+[00:52:00.901] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:01.996] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:52:01.996] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/history","route":"/history"}
+[00:52:01.996] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029160582}
+[00:52:16.260] Server  LOG      ✓ Compiled in 446ms
+[00:52:23.627] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029182933}
+[00:52:28.198] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029187528}
+[00:52:32.132] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029191456}
+[00:52:33.841] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029193165}
+[00:52:42.528] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029201858}
+[00:52:44.325] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029203647}
+[00:52:47.620] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029206952}
+[00:52:49.412] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029208698}
+[00:52:49.412] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:52:49.412] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:52:52.945] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029212268}
+[00:53:12.143] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029231468}
+[00:53:12.513] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:53:12.514] Browser LOG     Déploiements chargés: [{"agent_id":"cbbc939d-5f46-490e-9816-da15808bd80c","api_key_fingerprint":"03c5a38d","created_at":"2025-12-06T14:50:25","deployment_id":"b3043c6c-8afc-4514-aeed-a3683ba39e50","is_active":true}]
+[00:53:19.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029238432}
+[00:53:20.645] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029239966}
+[00:53:23.755] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029243057}
+[00:53:36.716] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029256046}
+[00:53:38.714] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029258039}
+[00:53:40.270] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029259602}
+[00:53:41.855] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029261186}
+[00:53:46.157] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029265485}
+[00:53:48.019] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029267352}
+[00:53:50.826] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029270143}
+[00:55:26.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:27.049] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:27.049] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:55:27.049] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029366383}
+[00:55:31.355] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:31.533] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:31.533] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[00:55:31.533] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029370859}
+[00:56:54.544] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029453875}
+[00:57:15.244] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029474574}
+[00:58:28.259] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029547589}
+[00:58:39.686] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029559015}
+[00:58:45.460] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029564793}
+[00:58:45.803] Browser LOG     Déploiements chargés: []
+[00:58:45.803] Browser LOG     Déploiements chargés: []
+[00:58:47.632] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029566959}
+[00:58:49.218] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029568550}
+[00:58:59.865] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029579153}
+[00:58:59.865] Browser LOG     Déploiements chargés: [{"agent_id":"b6d0fa1d-42bd-40cd-aaf5-22f8518b68a7","api_key_fingerprint":"1ce7feb5","created_at":"2025-12-06T14:59:33","deployment_id":"e966b9bc-9f19-4abf-a96e-7c9dab6bbd93","is_active":true}]
+[00:58:59.865] Browser LOG     Déploiements chargés: [{"agent_id":"b6d0fa1d-42bd-40cd-aaf5-22f8518b68a7","api_key_fingerprint":"1ce7feb5","created_at":"2025-12-06T14:59:33","deployment_id":"e966b9bc-9f19-4abf-a96e-7c9dab6bbd93","is_active":true}]
+[01:00:09.150] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029648482}
+[01:03:38.910] Server  LOG      ✓ Compiled in 883ms
+[01:03:39.995] Browser ERROR   ./app/dashboard/agents/page.tsx:57:7
+Parsing ecmascript source code failed
+  55 |           <span>Nouvel Agent</span>
+  56 |         </button>
+> 57 |       </div>
+     |       ^
+  58 |
+  59 |       {loading ? (
+  60 |         <div className="flex items-center justify-center py-20">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/dashboard/agents/page.tsx [Client Component Browser]
+    ./app/dashboard/agents/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/dashboard/agents/page.tsx [Client Component SSR]
+    ./app/dashboard/agents/page.tsx [Server Component]
+[01:03:39.996] Browser ERROR   ./app/dashboard/agents/page.tsx:57:8
+Parsing ecmascript source code failed
+  55 |           <span>Nouvel Agent</span>
+  56 |         </button>
+> 57 |       </div>
+     |        ^^^^^
+  58 |
+  59 |       {loading ? (
+  60 |         <div className="flex items-center justify-center py-20">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/dashboard/agents/page.tsx [Client Component Browser]
+    ./app/dashboard/agents/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/dashboard/agents/page.tsx [Client Component SSR]
+    ./app/dashboard/agents/page.tsx [Server Component]
+[01:03:50.387] Server  LOG      ✓ Compiled in 870ms
+[01:03:55.645] Server  LOG      ✓ Compiled in 1025ms
+[01:04:07.434] Server  LOG      ✓ Compiled in 462ms
+[01:04:13.581] Server  LOG      ✓ Compiled in 1082ms
+[01:04:31.218] Server  LOG      ✓ Compiled in 183ms
+[01:05:24.982] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:25.161] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:05:25.161] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/agents","route":"/dashboard/agents"}
+[01:05:25.161] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029964488}
+[01:05:50.334] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/run color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/run","o":"http://localhost:3000/dashboard/run","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029989657}
+[01:05:53.916] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765029993245}
+[01:06:04.902] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030004231}
+[01:06:13.432] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030012763}
+[01:06:15.032] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/history color: rgb(120, 120, 120) color: inherit {"dp":"/history","o":"http://localhost:3000/history","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030014352}
+[01:06:16.992] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030016324}
+[01:06:21.205] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/deployments color: rgb(120, 120, 120) color: inherit {"dp":"/deployments","o":"http://localhost:3000/deployments","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030020471}
+[01:06:21.205] Browser LOG     Déploiements chargés: [{"agent_id":"b6d0fa1d-42bd-40cd-aaf5-22f8518b68a7","api_key_fingerprint":"1ce7feb5","created_at":"2025-12-06T14:59:33","deployment_id":"e966b9bc-9f19-4abf-a96e-7c9dab6bbd93","is_active":true}]
+[01:06:21.205] Browser LOG     Déploiements chargés: [{"agent_id":"b6d0fa1d-42bd-40cd-aaf5-22f8518b68a7","api_key_fingerprint":"1ce7feb5","created_at":"2025-12-06T14:59:33","deployment_id":"e966b9bc-9f19-4abf-a96e-7c9dab6bbd93","is_active":true}]
+[01:06:27.149] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/results color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/results","o":"http://localhost:3000/dashboard/results","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030026473}
+[01:06:35.515] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/agents color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/agents","o":"http://localhost:3000/dashboard/agents","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765030034845}

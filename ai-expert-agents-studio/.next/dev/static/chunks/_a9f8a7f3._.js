@@ -3,14 +3,20 @@
 "use strict";
 
 __turbopack_context__.s([
-    "apiRequest",
-    ()=>apiRequest,
     "createAgent",
     ()=>createAgent,
+    "createRun",
+    ()=>createRun,
+    "deleteAgent",
+    ()=>deleteAgent,
     "getAgents",
     ()=>getAgents,
     "getCrewResult",
     ()=>getCrewResult,
+    "getDeployments",
+    ()=>getDeployments,
+    "getRuns",
+    ()=>getRuns,
     "getToken",
     ()=>getToken,
     "login",
@@ -20,7 +26,9 @@ __turbopack_context__.s([
     "runCrew",
     ()=>runCrew,
     "setToken",
-    ()=>setToken
+    ()=>setToken,
+    "updateAgent",
+    ()=>updateAgent
 ]);
 const API_BASE_URL = "http://localhost:8000";
 function getToken() {
@@ -36,31 +44,21 @@ function setToken(token) {
 function removeToken() {
     if ("TURBOPACK compile-time truthy", 1) {
         localStorage.removeItem("token");
-        localStorage.removeItem("lastRunId");
-        localStorage.removeItem("lastTopic");
     }
 }
 async function apiRequest(endpoint, options = {}) {
     const token = getToken();
-    const headers = {
-        "Content-Type": "application/json",
-        ...options.headers
-    };
-    if (token) {
-        ;
-        headers["Authorization"] = `Bearer ${token}`;
-    }
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-        ...options,
-        headers
+    const url = `${API_BASE_URL}${endpoint}`;
+    const response = await fetch(url, {
+        headers: {
+            "Content-Type": "application/json",
+            ...token && {
+                Authorization: `Bearer ${token}`
+            },
+            ...options.headers
+        },
+        ...options
     });
-    if (response.status === 401) {
-        removeToken();
-        if ("TURBOPACK compile-time truthy", 1) {
-            window.location.href = "/login";
-        }
-        throw new Error("Non autorisé");
-    }
     if (!response.ok) {
         throw new Error(`Erreur API: ${response.status}`);
     }
@@ -81,7 +79,6 @@ async function login(username, password) {
         throw new Error("Identifiants invalides");
     }
     const data = await response.json();
-    // Le backend retourne access_token, on le mappe à token
     return {
         token: data.access_token
     };
@@ -94,6 +91,32 @@ async function createAgent(agent) {
         method: "POST",
         body: JSON.stringify(agent)
     });
+}
+async function updateAgent(id, agent) {
+    return apiRequest(`/api/agents/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(agent)
+    });
+}
+async function deleteAgent(id) {
+    return apiRequest(`/api/agents/${id}`, {
+        method: "DELETE"
+    });
+}
+async function getDeployments() {
+    return apiRequest("/api/deployments");
+}
+async function createRun(agentId, topic) {
+    return apiRequest("/api/run", {
+        method: "POST",
+        body: JSON.stringify({
+            agent_id: agentId,
+            topic
+        })
+    });
+}
+async function getRuns() {
+    return apiRequest("/api/runs");
 }
 async function runCrew(topic, agentIds) {
     return apiRequest("/api/crew/run", {

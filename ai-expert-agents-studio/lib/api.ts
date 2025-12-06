@@ -14,35 +14,21 @@ export function setToken(token: string): void {
 export function removeToken(): void {
   if (typeof window !== "undefined") {
     localStorage.removeItem("token")
-    localStorage.removeItem("lastRunId")
-    localStorage.removeItem("lastTopic")
   }
 }
 
-export async function apiRequest<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+async function apiRequest<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = getToken()
+  const url = `${API_BASE_URL}${endpoint}`
 
-  const headers: HeadersInit = {
-    "Content-Type": "application/json",
-    ...options.headers,
-  }
-
-  if (token) {
-    ;(headers as Record<string, string>)["Authorization"] = `Bearer ${token}`
-  }
-
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+  const response = await fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+      ...(token && { Authorization: `Bearer ${token}` }),
+      ...options.headers,
+    },
     ...options,
-    headers,
   })
-
-  if (response.status === 401) {
-    removeToken()
-    if (typeof window !== "undefined") {
-      window.location.href = "/login"
-    }
-    throw new Error("Non autorisé")
-  }
 
   if (!response.ok) {
     throw new Error(`Erreur API: ${response.status}`)
@@ -63,7 +49,6 @@ export async function login(username: string, password: string): Promise<{ token
   }
 
   const data = await response.json()
-  // Le backend retourne access_token, on le mappe à token
   return { token: data.access_token }
 }
 
@@ -86,6 +71,48 @@ export async function createAgent(agent: Omit<Agent, "id">): Promise<Agent> {
   })
 }
 
+export async function updateAgent(id: string, agent: Partial<Agent>): Promise<Agent> {
+  return apiRequest<Agent>(`/api/agents/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(agent),
+  })
+}
+
+export async function deleteAgent(id: string): Promise<void> {
+  return apiRequest<void>(`/api/agents/${id}`, {
+    method: "DELETE",
+  })
+}
+
+export interface Deployment {
+  id: string
+  agent_id: string
+  status: string
+  created_at: string
+}
+
+export async function getDeployments(): Promise<Deployment[]> {
+  return apiRequest<Deployment[]>("/api/deployments")
+}
+
+export interface Run {
+  id: string
+  agent_id: string
+  status: string
+  created_at: string
+}
+
+export async function createRun(agentId: string, topic: string): Promise<Run> {
+  return apiRequest<Run>("/api/run", {
+    method: "POST",
+    body: JSON.stringify({ agent_id: agentId, topic }),
+  })
+}
+
+export async function getRuns(): Promise<Run[]> {
+  return apiRequest<Run[]>("/api/runs")
+}
+
 export interface CrewRunResponse {
   run_id: string
   status: string
@@ -99,8 +126,8 @@ export async function runCrew(topic: string, agentIds: string[]): Promise<CrewRu
 }
 
 export interface CrewResult {
-  status: string
-  // backend returns `result_long`; keep `result` as optional alias
+  id: string
+  run_id: string
   result?: string
   result_long?: string
 }

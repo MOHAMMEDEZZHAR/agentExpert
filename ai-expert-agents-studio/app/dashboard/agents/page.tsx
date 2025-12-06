@@ -31,8 +31,8 @@ export default function AgentsPage() {
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-8">
+    <div className="px-4 sm:px-6 lg:px-8 py-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
             <Users className="w-6 h-6 text-primary" />
@@ -45,14 +45,14 @@ export default function AgentsPage() {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 shadow-lg shadow-primary/25"
+          className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 shadow-lg shadow-primary/25 w-full sm:w-auto"
         >
           <Plus className="w-5 h-5" />
-          <span>Nouvel Agent</span>
+          <span className="hidden sm:inline">Créer un agent</span>
+          <span className="sm:hidden">Créer</span>
         </button>
       </div>
-
-      {loading ? (
+          {loading ? (
         <div className="flex items-center justify-center py-20">
           <Loader2 className="w-8 h-8 animate-spin text-primary" />
         </div>
@@ -65,14 +65,14 @@ export default function AgentsPage() {
           <p className="text-muted-foreground mb-6">Créez votre premier agent IA pour commencer</p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 rounded-lg transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 w-full sm:w-auto"
           >
             <Plus className="w-5 h-5" />
             Créer un agent
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {agents.map((agent) => (
             <AgentCard key={agent.id} agent={agent} />
           ))}

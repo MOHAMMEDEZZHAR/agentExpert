@@ -2,15 +2,32 @@
 
 import React, { useEffect, useState } from "react"
 import { Zap, Trash2, Copy } from "lucide-react"
+import { getAgents, type Agent } from "@/lib/api"
 
 export default function DeploymentsPage() {
   const [deployments, setDeployments] = useState<any[]>([])
+  const [agents, setAgents] = useState<Agent[]>([])
   const [loading, setLoading] = useState(true)
   const [copied, setCopied] = useState<string | null>(null)
 
   useEffect(() => {
     fetchDeployments()
+    fetchAgents()
   }, [])
+
+  const fetchAgents = async () => {
+    try {
+      const data = await getAgents()
+      setAgents(data)
+    } catch (err) {
+      console.error("Erreur lors du chargement des agents:", err)
+    }
+  }
+
+  const getAgentName = (agentId: string) => {
+    const agent = agents.find(a => a.id === agentId)
+    return agent ? agent.name : agentId.substring(0, 4) + "..."
+  }
 
 
   const fetchDeployments = async () => {
@@ -58,23 +75,23 @@ export default function DeploymentsPage() {
   if (loading) return <div className="text-center py-20">Chargement...</div>
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-8">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-8">
-          <Zap className="w-8 h-8 text-cyan-600" />
-          <h1 className="text-4xl font-bold text-cyan-600">Déploiements d'agents</h1>
+        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+          <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-600" />
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-600">Déploiements d'agents</h1>
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid gap-4 sm:gap-6">
           {deployments.length === 0 ? (
             <p className="text-gray-500 text-center py-20">Aucun agent déployé pour le moment</p>
           ) : (
             deployments.map((dep) => (
-              <div key={dep.deployment_id} className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
+              <div key={dep.deployment_id} className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-4 sm:p-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-4">
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-cyan-600">
-                      Agent ID: {dep.agent_id ? `${dep.agent_id.substring(0, 4)}...` : ""}
+                      {getAgentName(dep.agent_id)}
                     </h3>
                     <p className="text-sm text-gray-400 mt-1">{dep.created_at ? new Date(dep.created_at).toLocaleString("fr-FR") : "-"}</p>
                   </div>
